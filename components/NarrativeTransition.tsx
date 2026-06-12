@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function NarrativeTransition() {
   return (
-    <section className="relative bg-alabaster-100 py-40 px-6 overflow-hidden">
+    <section className="relative bg-alabaster-100 py-24 md:py-40 px-6 overflow-hidden">
       {/* Soft background texture — very subtle radial glow */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -52,7 +52,8 @@ export default function NarrativeTransition() {
           viewport={{ once: true, margin: "-60px" }}
           className="font-cormorant text-5xl md:text-6xl lg:text-7xl font-light text-gold-500 tracking-wide mb-10"
         >
-          <em>K</em>ingdom <em>S</em>pa 7
+          <span className="font-pinyon text-[1.25em] mr-2">K</span>ingdom{" "}
+          <span className="font-pinyon text-[1.25em]">S</span>pa 7
         </motion.h2>
 
         {/* Main narrative */}

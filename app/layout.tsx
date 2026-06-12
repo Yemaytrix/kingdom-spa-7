@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Jost } from "next/font/google";
+import { Cormorant_Garamond, Jost, Great_Vibes } from "next/font/google";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -14,6 +14,13 @@ const jost = Jost({
   subsets: ["latin"],
   weight: ["200", "300", "400", "500"],
   variable: "--font-jost",
+  display: "swap",
+});
+
+const pinyon = Great_Vibes({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-pinyon",
   display: "swap",
 });
 
@@ -35,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${jost.variable}`}>
+      <html lang="en" className={`${cormorant.variable} ${jost.variable} ${pinyon.variable}`}>
       <body className="antialiased">{children}</body>
     </html>
   );

@@ -47,7 +47,7 @@ export default function ServiceDrawer({ service, onClose }: ServiceDrawerProps) 
             className="fixed right-0 top-0 h-full w-full max-w-lg z-[70] bg-alabaster-100/98 backdrop-blur-xl shadow-2xl flex flex-col"
           >
             {/* Header */}
-            <div className="flex items-start justify-between p-8 pb-6 border-b border-gold-200/40">
+            <div className="flex items-start justify-between p-5 md:p-8 pb-6 border-b border-gold-200/40">
               <div>
                 <p className="font-jost text-[9px] tracking-[0.4em] uppercase text-gold-500/80 mb-1.5">
                   {service.category === "head-spa" ? "Head Spa" : "Styling Service"}
@@ -86,9 +86,9 @@ export default function ServiceDrawer({ service, onClose }: ServiceDrawerProps) 
             </div>
 
             {/* Scrollable body */}
-            <div className="flex-1 overflow-y-auto no-scrollbar px-8 py-7 space-y-8">
+            <div className="flex-1 overflow-y-auto no-scrollbar px-5 md:px-8 py-7 space-y-8">
               {/* Price & Duration row */}
-              <div className="flex items-center gap-8">
+              <div className="flex items-center gap-4 md:gap-8 flex-wrap">
                 <div>
                   <p className="font-jost text-[9px] tracking-[0.35em] uppercase text-ink-300 mb-1">
                     Starting From
@@ -160,7 +160,7 @@ export default function ServiceDrawer({ service, onClose }: ServiceDrawerProps) 
             </div>
 
             {/* Footer CTA */}
-            <div className="p-8 pt-5 border-t border-gold-200/40 space-y-3">
+            <div className="p-5 md:p-8 pt-5 border-t border-gold-200/40 space-y-3">
               <a
                 href={service.bookingUrl}
                 target="_blank"

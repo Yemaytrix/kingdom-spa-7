@@ -50,6 +50,7 @@
   /* Font families */
   --font-cormorant: var(--font-cormorant);
   --font-jost: var(--font-jost);
+  --font-pinyon: var(--font-pinyon);
 }
 
 :root {

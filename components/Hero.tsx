@@ -33,7 +33,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative w-full h-screen min-h-[600px] overflow-hidden flex flex-col items-center justify-start pt-16 md:pt-20"
+      className="relative w-full h-screen min-h-[600px] overflow-hidden flex flex-col items-center justify-start pt-14 md:pt-20"
     >
       {/*
         VIDEO BACKGROUND
@@ -87,13 +87,13 @@ export default function Hero() {
       >
         {/* Logo — transparent PNG, renders cleanly on any background */}
         {!logoError && (
-          <motion.div variants={item} className="mt-14 mb-2">
+          <motion.div variants={item} className="mt-6 sm:mt-14 mb-2">
             <img
               src="/logo.hero.png"
               alt="Kingdom Spa 7"
               width={160}
               height={160}
-              className="object-contain"
+              className="object-contain w-24 sm:w-36 md:w-40"
               onError={() => setLogoError(true)}
             />
           </motion.div>
@@ -102,7 +102,7 @@ export default function Hero() {
         {/* Main headline */}
         <motion.h1
           variants={item}
-          className="font-cormorant text-5xl sm:text-6xl md:text-7xl font-light text-white leading-[1.05] tracking-[-0.01em] mb-5"
+          className="font-cormorant text-4xl sm:text-6xl md:text-7xl font-light text-white leading-[1.05] tracking-[-0.01em] mb-4 md:mb-5"
         >
           Peace be within
           <br />
@@ -118,7 +118,7 @@ export default function Hero() {
         </motion.p>
         <motion.p
           variants={item}
-          className="font-jost text-xs tracking-[0.25em] uppercase text-gold-400 mb-10"
+          className="font-jost text-xs tracking-[0.25em] uppercase text-gold-400 mb-6 md:mb-10"
         >
           Psalm 122:7
         </motion.p>
@@ -126,7 +126,7 @@ export default function Hero() {
         {/* Subhead */}
         <motion.p
           variants={item}
-          className="font-jost text-xs md:text-sm tracking-[0.3em] uppercase text-white/75 mb-10"
+          className="font-jost text-xs md:text-sm tracking-[0.3em] uppercase text-white/75 mb-6 md:mb-10"
         >
           Exhale. Your renewal begins here.
         </motion.p>

@@ -155,12 +155,22 @@ export default function AboutSection() {
               <p className="font-jost text-[9px] tracking-[0.4em] uppercase text-gold-500/80 mb-3">
                 Find Us
               </p>
-              <p className="font-cormorant text-xl font-light text-ink-700">
-                155 Belmont Ave, Suite 116
-              </p>
-              <p className="font-cormorant text-xl font-light text-ink-500">
-                Belleville, NJ 07109
-              </p>
+              <a
+                href="https://maps.google.com/?q=155+Belmont+Ave+Suite+116+Belleville+NJ+07109"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-block"
+              >
+                <p className="font-cormorant text-xl font-light text-ink-700 group-hover:text-gold-600 transition-colors duration-300">
+                  155 Belmont Ave, Suite 116
+                </p>
+                <p className="font-cormorant text-xl font-light text-ink-500 group-hover:text-gold-500 transition-colors duration-300 flex items-center gap-2">
+                  Belleville, NJ 07109
+                  <svg width="11" height="11" viewBox="0 0 11 11" fill="none" className="opacity-40 group-hover:opacity-80 transition-opacity">
+                    <path d="M1 10L10 1M10 1H3M10 1V8" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </p>
+              </a>
               <div className="flex gap-5 mt-4">
                 <a
                   href="tel:8625966565"

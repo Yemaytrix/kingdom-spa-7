@@ -25,8 +25,8 @@ const footerLinks = {
       label: "Book Online",
       href: "https://kingdomspa7.glossgenius.com/services",
     },
-    { label: "155 Belmont Ave, Ste 116", href: null },
-    { label: "Belleville, NJ 07109", href: null },
+    { label: "155 Belmont Ave, Ste 116", href: "https://maps.google.com/?q=155+Belmont+Ave+Suite+116+Belleville+NJ+07109" },
+    { label: "Belleville, NJ 07109", href: "https://maps.google.com/?q=155+Belmont+Ave+Suite+116+Belleville+NJ+07109" },
   ],
 };
 

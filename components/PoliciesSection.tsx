@@ -34,6 +34,47 @@ const policies: PolicyCard[] = [
     ),
   },
   {
+    id: "client-responsibility",
+    heading: "Client Responsibility",
+    subheading: "What we ask of every guest",
+    body: (
+      <div className="space-y-4 font-jost text-sm font-light text-ink-400 leading-loose">
+        {/* Detangle callout */}
+        <div className="bg-gold-100/50 border border-gold-300/60 rounded-xl p-4 space-y-1">
+          <p className="font-jost text-[10px] tracking-[0.3em] uppercase text-gold-600 font-medium">
+            Hair Preparation Required
+          </p>
+          <p className="font-jost text-sm text-ink-600 leading-loose">
+            <strong className="font-medium">Clients must arrive with their hair fully detangled.</strong>{" "}
+            Clients who arrive with severely tangled, matted, or unknotted hair will be refused
+            service and required to rebook with a new deposit.
+          </p>
+        </div>
+
+        <p>Clients are also responsible for providing accurate and complete information regarding:</p>
+        <ul className="space-y-2 ml-4">
+          {[
+            "Health conditions",
+            "Scalp conditions",
+            "Allergies",
+            "Sensitivities",
+            "Medications",
+            "Any other factors that may affect service safety",
+          ].map((item, i) => (
+            <li key={i} className="flex items-start gap-2.5">
+              <span className="mt-2 w-1 h-1 rounded-full bg-gold-400/70 flex-shrink-0" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+        <p>
+          Failure to disclose relevant information may result in refusal of service and forfeiture
+          of deposits and applicable fees.
+        </p>
+      </div>
+    ),
+  },
+  {
     id: "late-arrival",
     heading: "Late Arrival",
     subheading: "Honoring everyone's time",
@@ -123,6 +164,235 @@ const policies: PolicyCard[] = [
       </div>
     ),
   },
+  {
+    id: "service-modifications",
+    heading: "Service Modifications",
+    subheading: "Additions & changes during your visit",
+    body: (
+      <div className="space-y-3 font-jost text-sm font-light text-ink-400 leading-loose">
+        <ul className="space-y-2 ml-4">
+          <li className="flex items-start gap-2.5">
+            <span className="mt-2 w-1 h-1 rounded-full bg-gold-400/70 flex-shrink-0" />
+            <span>
+              Any additions, upgrades, or changes requested during the appointment may result in an
+              increase in the final service price.
+            </span>
+          </li>
+          <li className="flex items-start gap-2.5">
+            <span className="mt-2 w-1 h-1 rounded-full bg-gold-400/70 flex-shrink-0" />
+            <span>
+              Additional service time is not guaranteed and will be accommodated based on schedule
+              availability.
+            </span>
+          </li>
+        </ul>
+      </div>
+    ),
+  },
+  {
+    id: "contraindications",
+    heading: "Contraindications & Health Policy",
+    subheading: "For the safety of all guests",
+    body: (
+      <div className="space-y-4 font-jost text-sm font-light text-ink-400 leading-loose">
+        <p>Please do not book an appointment if you have:</p>
+        <ul className="space-y-2 ml-4">
+          {[
+            "Open wounds, cuts, sores, lesions, or scabs on the scalp, face, neck, or treatment area.",
+            "Active scalp infections.",
+            "Ringworm or other contagious fungal infections.",
+            "Active lice or nits.",
+            "Severe scalp abrasions, irritation, inflammation, or unexplained scalp conditions.",
+            "Any contagious skin condition.",
+            "Recent scalp surgery or medical procedures without physician clearance.",
+            "Any condition that may be aggravated by scalp massage, steam treatments, water services, or topical products.",
+          ].map((item, i) => (
+            <li key={i} className="flex items-start gap-2.5">
+              <span className="mt-2 w-1 h-1 rounded-full bg-gold-400/70 flex-shrink-0" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ),
+  },
+  {
+    id: "illness",
+    heading: "Illness & Sickness Policy",
+    subheading: "Keeping our sanctuary safe",
+    body: (
+      <div className="space-y-4 font-jost text-sm font-light text-ink-400 leading-loose">
+        <p>
+          For the safety of all clients and service providers, please do not attend your appointment
+          if you are experiencing:
+        </p>
+        <ul className="space-y-2 ml-4">
+          {[
+            "Fever",
+            "Chills",
+            "Flu-like symptoms",
+            "Persistent coughing",
+            "Vomiting",
+            "Diarrhea",
+            "Any contagious illness or infection",
+          ].map((item, i) => (
+            <li key={i} className="flex items-start gap-2.5">
+              <span className="mt-2 w-1 h-1 rounded-full bg-gold-400/70 flex-shrink-0" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+        <p>
+          Clients who are feeling unwell should reschedule their appointment and seek appropriate
+          medical care if necessary.
+        </p>
+      </div>
+    ),
+  },
+  {
+    id: "medical",
+    heading: "Medical Evaluation Recommendation",
+    subheading: "Your wellbeing comes first",
+    body: (
+      <div className="space-y-3 font-jost text-sm font-light text-ink-400 leading-loose">
+        <p>
+          Clients experiencing open wounds, active infections, severe scalp irritation, excessive
+          scalp sensitivity, unexplained hair loss, or other abnormal scalp conditions should seek
+          evaluation and treatment from a licensed healthcare provider or dermatologist before
+          booking services.
+        </p>
+      </div>
+    ),
+  },
+  {
+    id: "right-to-refuse",
+    heading: "Right to Refuse Service",
+    subheading: "Health, safety & professional standards",
+    body: (
+      <div className="space-y-4 font-jost text-sm font-light text-ink-400 leading-loose">
+        <p>
+          Kingdom Spa 7 reserves the right to refuse, discontinue, or modify services if a
+          condition is observed that:
+        </p>
+        <ul className="space-y-2 ml-4">
+          {[
+            "May compromise the health or safety of the client.",
+            "May compromise the health or safety of the service provider or other clients.",
+            "Prevents services from being safely performed.",
+            "Violates sanitation and infection-control standards.",
+          ].map((item, i) => (
+            <li key={i} className="flex items-start gap-2.5">
+              <span className="mt-2 w-1 h-1 rounded-full bg-gold-400/70 flex-shrink-0" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+        <p>
+          If a client arrives with a contraindicated condition that was not disclosed during
+          booking, Kingdom Spa 7 reserves the right to refuse service at the time of the
+          appointment. In such cases, deposits will be forfeited, refunds will not be issued, and
+          additional fees may apply in accordance with Kingdom Spa 7 policies.
+        </p>
+      </div>
+    ),
+  },
+  {
+    id: "guest-policy",
+    heading: "Guest Policy",
+    subheading: "A peaceful space for all",
+    body: (
+      <div className="space-y-3 font-jost text-sm font-light text-ink-400 leading-loose">
+        <ul className="space-y-2 ml-4">
+          <li className="flex items-start gap-2.5">
+            <span className="mt-2 w-1 h-1 rounded-full bg-gold-400/70 flex-shrink-0" />
+            <span>
+              Only the client scheduled for services is permitted in the treatment room.
+            </span>
+          </li>
+          <li className="flex items-start gap-2.5">
+            <span className="mt-2 w-1 h-1 rounded-full bg-gold-400/70 flex-shrink-0" />
+            <span>
+              Guests, family members, and children who are not receiving services must remain in
+              the designated waiting area.
+            </span>
+          </li>
+        </ul>
+      </div>
+    ),
+  },
+  {
+    id: "conduct",
+    heading: "Respect & Professional Conduct",
+    subheading: "Maintaining our sanctuary's peace",
+    body: (
+      <div className="space-y-3 font-jost text-sm font-light text-ink-400 leading-loose">
+        <ul className="space-y-2 ml-4">
+          <li className="flex items-start gap-2.5">
+            <span className="mt-2 w-1 h-1 rounded-full bg-gold-400/70 flex-shrink-0" />
+            <span>
+              Kingdom Spa 7 is committed to providing a peaceful, professional, and luxury
+              experience for every guest.
+            </span>
+          </li>
+          <li className="flex items-start gap-2.5">
+            <span className="mt-2 w-1 h-1 rounded-full bg-gold-400/70 flex-shrink-0" />
+            <span>
+              Clients are expected to be respectful and courteous before, during, and after their
+              appointment.
+            </span>
+          </li>
+          <li className="flex items-start gap-2.5">
+            <span className="mt-2 w-1 h-1 rounded-full bg-gold-400/70 flex-shrink-0" />
+            <span>
+              Disrespectful, threatening, abusive, inappropriate, or disruptive behavior may result
+              in refusal of service and/or permanent booking restrictions.
+            </span>
+          </li>
+        </ul>
+      </div>
+    ),
+  },
+  {
+    id: "belongings",
+    heading: "Personal Belongings",
+    subheading: "Please keep your valuables close",
+    body: (
+      <div className="space-y-3 font-jost text-sm font-light text-ink-400 leading-loose">
+        <p>
+          Kingdom Spa 7 is not responsible for lost, stolen, misplaced, damaged, or unattended
+          personal belongings.
+        </p>
+      </div>
+    ),
+  },
+  {
+    id: "agreement",
+    heading: "Agreement to Terms",
+    subheading: "By booking, you agree to all policies",
+    body: (
+      <div className="space-y-3 font-jost text-sm font-light text-ink-400 leading-loose">
+        <p>
+          By booking an appointment with Kingdom Spa 7, you acknowledge that you have read,
+          understood, and agreed to all policies, procedures, terms, conditions, and health
+          requirements outlined above.
+        </p>
+        <p>
+          Failure to comply with these policies may result in appointment cancellation, refusal of
+          service, forfeiture of deposits, additional fees, or restriction from future bookings.
+        </p>
+        <p>
+          By booking an appointment with Kingdom Spa 7, the client authorizes all charges
+          associated with their selected services and acknowledges the cancellation, no-show, and
+          deposit policies. Fraudulent chargebacks may result in permanent refusal of future
+          services and collection efforts to recover unpaid balances.
+        </p>
+        <p className="text-ink-300 italic text-xs">
+          Kingdom Spa 7 reserves the right to update or modify these policies at any time without
+          prior notice.
+        </p>
+      </div>
+    ),
+  },
 ];
 
 function PolicyAccordion({ policy, index }: { policy: PolicyCard; index: number }) {
@@ -174,7 +444,7 @@ function PolicyAccordion({ policy, index }: { policy: PolicyCard; index: number 
             transition={{ duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="overflow-hidden"
           >
-            <div className="pb-8 pr-10 max-w-2xl">{policy.body}</div>
+            <div className="pb-8 pr-4 md:pr-10 max-w-2xl">{policy.body}</div>
           </motion.div>
         )}
       </AnimatePresence>
