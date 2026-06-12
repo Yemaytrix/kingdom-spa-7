@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  /* Gold palette */
+  --color-gold-100: #F7F0D8;
+  --color-gold-200: #EEE0B0;
+  --color-gold-300: #E4CE80;
+  --color-gold-400: #D4AF37;
+  --color-gold-500: #C9A84C;
+  --color-gold-600: #B8962C;
+  --color-gold-700: #9A7B1E;
+  --color-gold-800: #7A5F12;
+  --color-gold-900: #5C470A;
+
+  /* Alabaster / warm white */
+  --color-alabaster-50: #FDFCFA;
+  --color-alabaster-100: #FAF8F5;
+  --color-alabaster-200: #F5F0E8;
+  --color-alabaster-300: #EDE8DF;
+  --color-alabaster-400: #E0D9CE;
+
+  /* Calm blue */
+  --color-calm-50: #F0F7FA;
+  --color-calm-100: #E4F0F6;
+  --color-calm-200: #D6E8F0;
+  --color-calm-300: #B8D4E3;
+  --color-calm-400: #94BDD4;
+  --color-calm-500: #6FA3BF;
+
+  /* Sapphire — from the abstract painting: deep royal blue + gold */
+  --color-sapphire-50: #EEF3FB;
+  --color-sapphire-100: #D5E2F5;
+  --color-sapphire-200: #A8C2EA;
+  --color-sapphire-300: #6B96D6;
+  --color-sapphire-400: #3A6EC2;
+  --color-sapphire-500: #1B4FA8;
+  --color-sapphire-600: #0F3585;
+  --color-sapphire-700: #0A2460;
+
+  /* Warm ink */
+  --color-ink-50: #F2EEEC;
+  --color-ink-100: #DED7D3;
+  --color-ink-200: #C0B5AF;
+  --color-ink-300: #A39890;
+  --color-ink-400: #7A6E67;
+  --color-ink-500: #5A4E47;
+  --color-ink-700: #3C3530;
+  --color-ink-900: #1E1A18;
+
+  /* Font families */
+  --font-cormorant: var(--font-cormorant);
+  --font-jost: var(--font-jost);
+}
+
+:root {
+  --background: #FAF8F5;
+  --foreground: #3C3530;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-jost), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling — minimal, warm */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F0E8;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 2px;
+}
+
+/* Selection color */
+::selection {
+  background: #EEE0B0;
+  color: #3C3530;
+}
+
+
+/* Utility: hide scrollbar while keeping scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
