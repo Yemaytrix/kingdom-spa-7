@@ -9,7 +9,7 @@ const navLinks = [
   { label: "Peace", href: "#rituals" },
   { label: "The Journey", href: "#journey" },
   { label: "Gallery", href: "/gallery" },
-  { label: "Sanctuary Guidelines", href: "#guidelines" },
+  { label: "KS7 Guidelines", href: "#guidelines" },
   { label: "Contact", href: "#footer" },
 ];
 

@@ -25,7 +25,19 @@ const cardVariants = {
 /* All cards share the same warm alabaster base at 50% opacity — consistent, calm */
 const cardBg = "bg-alabaster-100/50 border-gold-200/50";
 
+const addonMeta: Record<string, { label: string; note: string }> = {
+  "styling-addon": {
+    label: "Service Add-On",
+    note: "Cannot be combined with Head Spa services",
+  },
+  "head-spa-addon": {
+    label: "Head Spa Add-On",
+    note: "Requires a Head Spa service to book",
+  },
+};
+
 export default function ServiceCard({ service, index, onClick }: ServiceCardProps) {
+  const addon = addonMeta[service.category];
 
   return (
     <motion.button
@@ -38,13 +50,32 @@ export default function ServiceCard({ service, index, onClick }: ServiceCardProp
       onClick={() => onClick(service)}
       className={`relative group w-full text-left border rounded-2xl p-8 md:p-10 ${cardBg} transition-shadow duration-300 hover:shadow-[0_8px_40px_rgba(212,175,55,0.12)] cursor-pointer`}
     >
-      {/* Featured badge */}
-      {service.featured && (
-        <div className="absolute top-6 right-6">
-          <span className="font-jost text-[8px] tracking-[0.35em] uppercase text-gold-600 bg-gold-100/70 border border-gold-300/50 px-2.5 py-1 rounded-full">
-            Most Loved
-          </span>
+      {/* Add-on notice — replaces featured badge for add-on services */}
+      {addon ? (
+        <div className="mb-5 flex items-start gap-2 bg-ink-50/60 border border-ink-200/30 rounded-xl px-3 py-2.5">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" className="mt-0.5 flex-shrink-0 text-ink-400">
+            <circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" strokeWidth="1"/>
+            <line x1="6.5" y1="4" x2="6.5" y2="7" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
+            <circle cx="6.5" cy="9" r="0.6" fill="currentColor"/>
+          </svg>
+          <div>
+            <p className="font-jost text-[9px] tracking-[0.3em] uppercase text-ink-500 font-medium leading-none mb-0.5">
+              {addon.label}
+            </p>
+            <p className="font-jost text-[10px] font-light text-ink-400 leading-snug">
+              {addon.note}
+            </p>
+          </div>
         </div>
+      ) : (
+        /* Featured badge — only shown on non-add-on services */
+        service.featured && (
+          <div className="absolute top-6 right-6">
+            <span className="font-jost text-[8px] tracking-[0.35em] uppercase text-gold-600 bg-gold-100/70 border border-gold-300/50 px-2.5 py-1 rounded-full">
+              Most Loved
+            </span>
+          </div>
+        )
       )}
 
       {/* Category label */}

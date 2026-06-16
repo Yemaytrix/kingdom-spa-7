@@ -5,7 +5,7 @@ export interface ServiceInclusion {
 export interface Service {
   id: string;
   name: string;
-  category: "head-spa" | "styling" | "add-on";
+  category: "head-spa" | "styling" | "styling-addon" | "head-spa-addon";
   tagline: string;
   description: string;
   inclusions: string[];
@@ -14,7 +14,6 @@ export interface Service {
   duration: string;
   deposit: string;
   bookingUrl: string;
-  /** Used for optional add-on note */
   note?: string;
   featured?: boolean;
 }
@@ -202,8 +201,180 @@ export const services: Service[] = [
     note: "Braid down is a flat protective foundation typically done before styles outside this service, such as wig installs, sew-ins, or crochet.",
     bookingUrl: "https://kingdomspa7.glossgenius.com/services",
   },
+
+  /* ── Styling Add-Ons ─────────────────────────────────────────── */
+  {
+    id: "hair-trim",
+    name: "Hair Trim",
+    category: "styling-addon",
+    tagline: "Less than two inches",
+    description: "A precise trim of less than two inches to remove split ends and maintain your style.",
+    inclusions: [],
+    price: "$45+",
+    duration: "15 min",
+    deposit: "$35",
+    bookingUrl: "https://kingdomspa7.glossgenius.com/services",
+  },
+  {
+    id: "hair-cut",
+    name: "Hair Cut",
+    category: "styling-addon",
+    tagline: "Two inches or more",
+    description: "A cut of two inches or more for a new length or shape. Must be added to a styling service.",
+    inclusions: [],
+    price: "$55",
+    duration: "20 min",
+    deposit: "$35",
+    bookingUrl: "https://kingdomspa7.glossgenius.com/services",
+  },
+  {
+    id: "length-density",
+    name: "Length & Density",
+    category: "styling-addon",
+    tagline: "Passes the shoulders",
+    description: "Additional pricing applied for hair that passes the shoulders due to increased length and density requirements.",
+    inclusions: [],
+    price: "$30+",
+    duration: "15 min",
+    deposit: "$35",
+    bookingUrl: "https://kingdomspa7.glossgenius.com/services",
+  },
+  {
+    id: "intense-protein",
+    name: "Intense Protein Leave-In",
+    category: "styling-addon",
+    tagline: "Deep strengthening treatment",
+    description: "A concentrated protein leave-in treatment to strengthen and fortify hair strands from within.",
+    inclusions: [],
+    price: "$15",
+    duration: "5 min",
+    deposit: "$0",
+    bookingUrl: "https://kingdomspa7.glossgenius.com/services",
+  },
+  {
+    id: "silk-coating",
+    name: "Silk Coating",
+    category: "styling-addon",
+    tagline: "For Silk Press services",
+    description: "A silk coating treatment applied during silk press services for an ultra-smooth, glass-like finish.",
+    inclusions: [],
+    price: "$15+",
+    duration: "5 min",
+    deposit: "$0",
+    bookingUrl: "https://kingdomspa7.glossgenius.com/services",
+  },
+  {
+    id: "late-fee-5",
+    name: "Late Fee (11–15 min)",
+    category: "styling-addon",
+    tagline: "Arriving 11–15 minutes late",
+    description: "Automatically applied for arrivals 11–15 minutes past the scheduled appointment time, per the late arrival policy.",
+    inclusions: [],
+    price: "$5",
+    duration: "—",
+    deposit: "$0",
+    bookingUrl: "https://kingdomspa7.glossgenius.com/services",
+  },
+  {
+    id: "late-fee-17",
+    name: "Late Fee (16–24 min)",
+    category: "styling-addon",
+    tagline: "Arriving 16–24 minutes late",
+    description: "Automatically applied for arrivals 16–24 minutes past the scheduled appointment time, per the late arrival policy.",
+    inclusions: [],
+    price: "$22+",
+    duration: "—",
+    deposit: "$0",
+    bookingUrl: "https://kingdomspa7.glossgenius.com/services",
+  },
+
+  /* ── Head Spa Add-Ons ────────────────────────────────────────── */
+  {
+    id: "hs-silk-press",
+    name: "Silk Press w/ Style",
+    category: "head-spa-addon",
+    tagline: "Sleek & polished finish",
+    description: "A full silk press with style added to your Head Spa service for smooth, luminous results.",
+    inclusions: [],
+    price: "$130+",
+    duration: "90 min",
+    deposit: "$35",
+    bookingUrl: "https://kingdomspa7.glossgenius.com/services",
+  },
+  {
+    id: "hs-two-strand-twist",
+    name: "Two Strand Twist",
+    category: "head-spa-addon",
+    tagline: "Defined & protected",
+    description: "Two strand twists applied after your Head Spa service for beautiful definition and protection.",
+    inclusions: [],
+    price: "$130+",
+    duration: "95 min",
+    deposit: "$35",
+    bookingUrl: "https://kingdomspa7.glossgenius.com/services",
+  },
+  {
+    id: "hs-wash-define",
+    name: "Wash & Define Curls",
+    category: "head-spa-addon",
+    tagline: "Enhanced curl definition",
+    description: "Curl definition applied after your Head Spa service to enhance your natural curl pattern.",
+    inclusions: [],
+    price: "$110+",
+    duration: "80 min",
+    deposit: "$35",
+    bookingUrl: "https://kingdomspa7.glossgenius.com/services",
+  },
+  {
+    id: "hs-finger-coils",
+    name: "Finger Coils",
+    category: "head-spa-addon",
+    tagline: "Beautifully coiled",
+    description: "Finger coils applied after your Head Spa service for defined, sculpted coils.",
+    inclusions: [],
+    price: "$125+",
+    duration: "80 min",
+    deposit: "$35",
+    bookingUrl: "https://kingdomspa7.glossgenius.com/services",
+  },
+  {
+    id: "hs-trim",
+    name: "Trim (Less Than 2in)",
+    category: "head-spa-addon",
+    tagline: "A clean finish",
+    description: "A precise trim of less than two inches added to your Head Spa service.",
+    inclusions: [],
+    price: "$35+",
+    duration: "15 min",
+    deposit: "$35",
+    bookingUrl: "https://kingdomspa7.glossgenius.com/services",
+  },
+  {
+    id: "hs-hair-cut",
+    name: "Hair Cut (2in or More)",
+    category: "head-spa-addon",
+    tagline: "A fresh length",
+    description: "A cut of two or more inches added to your Head Spa service.",
+    inclusions: [],
+    price: "$45+",
+    duration: "25 min",
+    deposit: "$35",
+    bookingUrl: "https://kingdomspa7.glossgenius.com/services",
+  },
+  {
+    id: "hs-length-density",
+    name: "Length & Density",
+    category: "head-spa-addon",
+    tagline: "Passes the shoulder",
+    description: "Additional pricing for hair passing the shoulder due to length and density requirements.",
+    inclusions: [],
+    price: "$25+",
+    duration: "15 min",
+    deposit: "$35",
+    bookingUrl: "https://kingdomspa7.glossgenius.com/services",
+  },
 ];
 
-export const headSpaServices = services.filter((s) => s.category === "head-spa");
-export const stylingServices = services.filter((s) => s.category === "styling");
+export const headSpaServices = services.filter((s) => s.category === "head-spa" || s.category === "head-spa-addon");
+export const stylingServices = services.filter((s) => s.category === "styling" || s.category === "styling-addon");
 export const featuredServices = services.filter((s) => s.featured);

@@ -27,7 +27,7 @@ const pinyon = Great_Vibes({
 export const metadata: Metadata = {
   title: "Kingdom Spa 7 | Luxury Hair & Head Spa — Belleville, NJ",
   description:
-    "A sanctuary designed to quiet the mind, restore the crown, and awaken the spirit. Powered by the Holy Spirit. Book your peace today.",
+    "A sanctuary designed to quiet the mind, restore the crown. Powered by the Holy Spirit. Book your peace today.",
   keywords: ["head spa", "hair spa", "luxury salon", "Belleville NJ", "Kingdom Spa 7"],
   openGraph: {
     title: "Kingdom Spa 7",

@@ -50,7 +50,13 @@ export default function ServiceDrawer({ service, onClose }: ServiceDrawerProps) 
             <div className="flex items-start justify-between p-5 md:p-8 pb-6 border-b border-gold-200/40">
               <div>
                 <p className="font-jost text-[9px] tracking-[0.4em] uppercase text-gold-500/80 mb-1.5">
-                  {service.category === "head-spa" ? "Head Spa" : "Styling Service"}
+                  {service.category === "head-spa"
+                    ? "Head Spa"
+                    : service.category === "styling-addon"
+                    ? "Service Add-On"
+                    : service.category === "head-spa-addon"
+                    ? "Head Spa Add-On"
+                    : "Styling Service"}
                 </p>
                 <h2 className="font-cormorant text-3xl font-light text-ink-700 leading-tight">
                   {service.name}

@@ -8,7 +8,7 @@ const footerLinks = {
     { label: "Peace", href: "#rituals" },
     { label: "The Journey", href: "#journey" },
     { label: "Our Story", href: "#about" },
-    { label: "Sanctuary Guidelines", href: "#guidelines" },
+    { label: "KS7 Guidelines", href: "#guidelines" },
   ],
   Hours: [
     { label: "Tue – Fri", href: null },

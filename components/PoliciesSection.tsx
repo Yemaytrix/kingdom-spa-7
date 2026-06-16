@@ -46,7 +46,7 @@ const policies: PolicyCard[] = [
           </p>
           <p className="font-jost text-sm text-ink-600 leading-loose">
             <strong className="font-medium">Clients must arrive with their hair fully detangled.</strong>{" "}
-            Clients who arrive with severely tangled, matted, or unknotted hair will be refused
+            Clients who arrive with severely tangled, matted, or knotted hair will be refused
             service and required to rebook with a new deposit.
           </p>
         </div>
@@ -505,9 +505,9 @@ export default function PoliciesSection() {
             viewport={{ once: true }}
             className="font-cormorant text-4xl sm:text-5xl md:text-6xl font-light text-ink-700 leading-tight mb-5"
           >
-            Sanctuary
-            <br />
-            <em className="text-gold-600">Guidelines</em>
+          Kingdom Spa 7
+          <br />
+          <em className="text-gold-600">Guidelines</em>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 10 }}

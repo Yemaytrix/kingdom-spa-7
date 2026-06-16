@@ -66,9 +66,7 @@ export default function NarrativeTransition() {
         >
           A sanctuary designed to quiet the mind,
           <br />
-          <em className="text-gold-600">restore the crown,</em>
-          <br />
-          and awaken the spirit.
+          <em className="text-gold-600">restore the crown.</em>
         </motion.h2>
 
         {/* Faith tagline */}
@@ -80,7 +78,6 @@ export default function NarrativeTransition() {
           className="font-jost text-sm md:text-base font-light tracking-[0.12em] text-ink-400 leading-loose max-w-xl mx-auto mb-16"
         >
           Powered by the Holy Spirit, every treatment is an offering of peace.
-          We hold sacred space for your restoration: body, hair, and spirit.
         </motion.p>
 
         {/* Bottom gold rule */}

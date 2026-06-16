@@ -114,12 +114,12 @@ export default function JourneySection() {
         >
           <span className="text-gold-400/50 text-xl block mb-5">✦</span>
           <p className="font-cormorant italic text-xl md:text-2xl text-ink-500 leading-relaxed">
-            &ldquo;She is clothed with strength and dignity,
+            &ldquo;God is within her, she will not fall;
             <br />
-            and she laughs without fear of the future.&rdquo;
+            God will help her at break of day.&rdquo;
           </p>
           <p className="font-jost text-[9px] tracking-[0.35em] uppercase text-gold-500/70 mt-4">
-            Proverbs 31:25
+            Psalm 46:5
           </p>
         </motion.div>
       </div>

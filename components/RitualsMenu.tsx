@@ -9,6 +9,22 @@ import ServiceDrawer from "./ServiceDrawer";
 
 type Tab = "all" | "head-spa" | "styling";
 
+function isAddon(s: Service) {
+  return s.category === "styling-addon" || s.category === "head-spa-addon";
+}
+
+function SectionDivider({ label }: { label: string }) {
+  return (
+    <div className="col-span-full flex items-center gap-4 pt-6 pb-2">
+      <div className="flex-1 h-px bg-gold-200/50" />
+      <span className="font-jost text-[9px] tracking-[0.4em] uppercase text-gold-500/70">
+        {label}
+      </span>
+      <div className="flex-1 h-px bg-gold-200/50" />
+    </div>
+  );
+}
+
 export default function RitualsMenu() {
   const [activeTab, setActiveTab] = useState<Tab>("all");
   const [selectedService, setSelectedService] = useState<Service | null>(null);
@@ -48,7 +64,7 @@ export default function RitualsMenu() {
               viewport={{ once: true }}
               className="font-jost text-[9px] tracking-[0.45em] uppercase text-gold-500/80 mb-4"
             >
-              Morning Peace Menu
+              Peace Menu
             </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 16 }}
@@ -97,14 +113,31 @@ export default function RitualsMenu() {
 
           {/* Services grid — asymmetric: 3 cols on large, 2 on medium, 1 on mobile */}
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-6">
-            {displayedServices.map((service, i) => (
-              <ServiceCard
-                key={service.id}
-                service={service}
-                index={i}
-                onClick={setSelectedService}
-              />
-            ))}
+            {displayedServices.map((service, i) => {
+              const prevIsAddon = i > 0 && isAddon(displayedServices[i - 1]);
+              const currIsAddon = isAddon(service);
+              const showDivider = currIsAddon && !prevIsAddon;
+              return (
+                <>
+                  {showDivider && (
+                    <SectionDivider
+                      key={`divider-${service.id}`}
+                      label={
+                        service.category === "head-spa-addon"
+                          ? "Head Spa Add-Ons"
+                          : "Service Add-Ons"
+                      }
+                    />
+                  )}
+                  <ServiceCard
+                    key={service.id}
+                    service={service}
+                    index={i}
+                    onClick={setSelectedService}
+                  />
+                </>
+              );
+            })}
           </div>
 
           {/* Bottom note */}
