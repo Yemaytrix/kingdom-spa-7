@@ -13,14 +13,17 @@ function isAddon(s: Service) {
   return s.category === "styling-addon" || s.category === "head-spa-addon";
 }
 
-function SectionDivider({ label }: { label: string }) {
+function SectionDivider({ label, variant = "gold" }: { label: string; variant?: "gold" | "sapphire" }) {
+  const lineColor = variant === "sapphire" ? "bg-sapphire-200/70" : "bg-gold-400/60";
+  const textColor = variant === "sapphire" ? "text-sapphire-500" : "text-gold-600";
+  const bgColor   = variant === "sapphire" ? "bg-sapphire-50/80 border-sapphire-200/50" : "bg-gold-50/80 border-gold-200/60";
   return (
-    <div className="col-span-full flex items-center gap-4 pt-6 pb-2">
-      <div className="flex-1 h-px bg-gold-200/50" />
-      <span className="font-jost text-[9px] tracking-[0.4em] uppercase text-gold-500/70">
+    <div className="col-span-full flex items-center gap-4 pt-10 pb-4">
+      <div className={`flex-1 h-px ${lineColor}`} />
+      <span className={`font-jost text-[10px] tracking-[0.4em] uppercase font-medium border rounded-full px-4 py-1.5 ${textColor} ${bgColor}`}>
         {label}
       </span>
-      <div className="flex-1 h-px bg-gold-200/50" />
+      <div className={`flex-1 h-px ${lineColor}`} />
     </div>
   );
 }
@@ -114,19 +117,26 @@ export default function RitualsMenu() {
           {/* Services grid — asymmetric: 3 cols on large, 2 on medium, 1 on mobile */}
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-6">
             {displayedServices.map((service, i) => {
-              const prevIsAddon = i > 0 && isAddon(displayedServices[i - 1]);
-              const currIsAddon = isAddon(service);
-              const showDivider = currIsAddon && !prevIsAddon;
+              const prev = i > 0 ? displayedServices[i - 1] : null;
+              const showStylingAddonDivider =
+                service.category === "styling-addon" && (!prev || !isAddon(prev));
+              const showHeadSpaAddonDivider =
+                service.category === "head-spa-addon" &&
+                (!prev || prev.category !== "head-spa-addon");
               return (
                 <>
-                  {showDivider && (
+                  {showStylingAddonDivider && (
                     <SectionDivider
-                      key={`divider-${service.id}`}
-                      label={
-                        service.category === "head-spa-addon"
-                          ? "Head Spa Add-Ons"
-                          : "Service Add-Ons"
-                      }
+                      key={`divider-styling-${service.id}`}
+                      label="Service Add-Ons"
+                      variant="gold"
+                    />
+                  )}
+                  {showHeadSpaAddonDivider && (
+                    <SectionDivider
+                      key={`divider-headspa-${service.id}`}
+                      label="Head Spa Add-Ons"
+                      variant="sapphire"
                     />
                   )}
                   <ServiceCard

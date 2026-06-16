@@ -25,14 +25,24 @@ const cardVariants = {
 /* All cards share the same warm alabaster base at 50% opacity — consistent, calm */
 const cardBg = "bg-alabaster-100/50 border-gold-200/50";
 
-const addonMeta: Record<string, { label: string; note: string }> = {
+const addonMeta: Record<string, { label: string; note: string; bg: string; border: string; labelColor: string; noteColor: string; iconColor: string }> = {
   "styling-addon": {
     label: "Service Add-On",
     note: "Cannot be combined with Head Spa services",
+    bg: "bg-gold-100/50",
+    border: "border-gold-300/60",
+    labelColor: "text-gold-700",
+    noteColor: "text-gold-600/80",
+    iconColor: "text-gold-500",
   },
   "head-spa-addon": {
     label: "Head Spa Add-On",
     note: "Requires a Head Spa service to book",
+    bg: "bg-sapphire-50/70",
+    border: "border-sapphire-200/60",
+    labelColor: "text-sapphire-600",
+    noteColor: "text-sapphire-500/80",
+    iconColor: "text-sapphire-400",
   },
 };
 
@@ -52,17 +62,17 @@ export default function ServiceCard({ service, index, onClick }: ServiceCardProp
     >
       {/* Add-on notice — replaces featured badge for add-on services */}
       {addon ? (
-        <div className="mb-5 flex items-start gap-2 bg-ink-50/60 border border-ink-200/30 rounded-xl px-3 py-2.5">
-          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" className="mt-0.5 flex-shrink-0 text-ink-400">
+        <div className={`mb-5 flex items-start gap-2 ${addon.bg} border ${addon.border} rounded-xl px-3 py-2.5`}>
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" className={`mt-0.5 flex-shrink-0 ${addon.iconColor}`}>
             <circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" strokeWidth="1"/>
             <line x1="6.5" y1="4" x2="6.5" y2="7" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
             <circle cx="6.5" cy="9" r="0.6" fill="currentColor"/>
           </svg>
           <div>
-            <p className="font-jost text-[9px] tracking-[0.3em] uppercase text-ink-500 font-medium leading-none mb-0.5">
+            <p className={`font-jost text-[9px] tracking-[0.3em] uppercase font-medium leading-none mb-0.5 ${addon.labelColor}`}>
               {addon.label}
             </p>
-            <p className="font-jost text-[10px] font-light text-ink-400 leading-snug">
+            <p className={`font-jost text-[10px] font-light leading-snug ${addon.noteColor}`}>
               {addon.note}
             </p>
           </div>
