@@ -59,17 +59,19 @@ export default function Footer() {
           viewport={{ once: true }}
           className="text-center mb-16 md:mb-20"
         >
-          {/* Full logo — shows when public/ks7-logo.png is present */}
+          {/* Full logo */}
           <div className="flex justify-center mb-8">
             {!logoError ? (
-              <img
-                src="/logo.hero.png"
-                alt="Kingdom Spa 7"
-                width={200}
-                height={200}
-                className="object-contain"
-                onError={() => setLogoError(true)}
-              />
+              <div className="w-40 h-40 rounded-full overflow-hidden bg-white shadow-[0_0_40px_rgba(212,175,55,0.15)] flex-shrink-0">
+                <img
+                  src="/logo.hero.png"
+                  alt="Kingdom Spa 7"
+                  width={200}
+                  height={200}
+                  className="object-cover w-full h-full"
+                  onError={() => setLogoError(true)}
+                />
+              </div>
             ) : (
               <div className="text-center space-y-2">
                 <p className="font-cormorant text-3xl font-light text-gold-400 tracking-wide">

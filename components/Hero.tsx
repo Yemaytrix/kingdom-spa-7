@@ -94,6 +94,7 @@ export default function Hero() {
               width={160}
               height={160}
               className="object-contain w-24 sm:w-36 md:w-40"
+              style={{ mixBlendMode: "multiply" }}
               onError={() => setLogoError(true)}
             />
           </motion.div>

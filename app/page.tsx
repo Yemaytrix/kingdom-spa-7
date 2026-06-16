@@ -24,7 +24,6 @@ export default function Home() {
             backgroundPosition: "center",
             backgroundAttachment: "fixed",
             backgroundRepeat: "no-repeat",
-            opacity: 0.4,
           }}
         />
         <NarrativeTransition />
