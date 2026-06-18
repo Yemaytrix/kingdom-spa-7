@@ -66,8 +66,8 @@ export default function Footer() {
                 <img
                   src="/logo.hero.png"
                   alt="Kingdom Spa 7"
-                  width={200}
-                  height={200}
+                  width={400}
+                  height={400}
                   className="object-cover w-full h-full"
                   onError={() => setLogoError(true)}
                 />
