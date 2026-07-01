@@ -22,8 +22,8 @@ const cardVariants = {
   }),
 };
 
-/* All cards share the same warm alabaster base at 50% opacity — consistent, calm */
-const cardBg = "bg-alabaster-100/50 border-gold-200/50";
+/* All cards share the same warm alabaster base at 60% opacity — consistent, calm */
+const cardBg = "bg-alabaster-100/60 border-gold-200/60";
 
 const addonMeta: Record<string, { label: string; note: string; bg: string; border: string; labelColor: string; noteColor: string; iconColor: string }> = {
   "styling-addon": {
