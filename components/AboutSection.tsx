@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 
 const hours = [
   { day: "Monday", time: "Closed" },
-  { day: "Tuesday", time: "9 AM – 6 PM" },
-  { day: "Wednesday", time: "9 AM – 6 PM" },
-  { day: "Thursday", time: "9 AM – 6 PM" },
-  { day: "Friday", time: "9 AM – 6 PM" },
-  { day: "Saturday", time: "9 AM – 6 PM" },
+  { day: "Tuesday", time: "9 AM – 5 PM" },
+  { day: "Wednesday", time: "9 AM – 5 PM" },
+  { day: "Thursday", time: "9 AM – 5 PM" },
+  { day: "Friday", time: "9 AM – 5 PM" },
+  { day: "Saturday", time: "9 AM – 5 PM" },
   { day: "Sunday", time: "Closed" },
 ];
 
@@ -59,17 +59,17 @@ export default function AboutSection() {
             >
               <p>
                 Kingdom Spa 7 was founded on a simple but powerful belief: that caring for your
-                crown is an act of worship. The number seven is the number of completion. Here,
-                every visit is designed to bring you one step closer to wholeness.
+                crown is an act of self care. The number seven is the number of completion. Here,
+                every visit is designed to bring you one step closer to completion.
               </p>
               <p>
                 Powered by the Holy Spirit, this is not just a salon. It is a sanctuary where skilled
-                hands and quiet intention come together to restore your hair, your scalp, and your spirit.
+                hands and quiet intention come together to restore your hair, your scalp, and peace of mind.
                 Every steamer session, every scalp massage, every moment of stillness is offered with
                 intention.
               </p>
               <p>
-                We believe beauty begins in peace. And peace is what we hold for you every time you walk
+                We believe beauty begins with peace, and peace is what we hold for you every time you walk
                 through our doors.
               </p>
             </motion.div>

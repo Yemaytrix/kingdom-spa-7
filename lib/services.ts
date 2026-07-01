@@ -16,6 +16,7 @@ export interface Service {
   bookingUrl: string;
   note?: string;
   featured?: boolean;
+  grandOpening?: boolean;
 }
 
 export const services: Service[] = [
@@ -39,6 +40,7 @@ export const services: Service[] = [
     deposit: "$35",
     bookingUrl: "https://kingdomspa7.glossgenius.com/services",
     featured: false,
+    grandOpening: true,
   },
   {
     id: "relax-and-reset",
@@ -61,6 +63,7 @@ export const services: Service[] = [
     deposit: "$35",
     bookingUrl: "https://kingdomspa7.glossgenius.com/services",
     featured: true,
+    grandOpening: true,
   },
   {
     id: "luxury-day-off",
@@ -85,6 +88,7 @@ export const services: Service[] = [
     deposit: "$35",
     bookingUrl: "https://kingdomspa7.glossgenius.com/services",
     featured: true,
+    grandOpening: true,
   },
   {
     id: "silk-press",
@@ -176,7 +180,7 @@ export const services: Service[] = [
       "Deep conditioning treatment with steamer",
       "Flat twist on wet or blow-dried hair",
     ],
-    price: "$90+",
+    price: "$95+",
     duration: "85 min",
     deposit: "$35",
     note: "This technique is mainly used for twist-outs. Medium to large sections of the hair will be used to achieve results.",

@@ -12,9 +12,9 @@ const footerLinks = {
   ],
   Hours: [
     { label: "Tue – Fri", href: null },
-    { label: "9 AM – 6 PM", href: null },
+    { label: "9 AM – 5 PM", href: null },
     { label: "Saturday", href: null },
-    { label: "9 AM – 6 PM", href: null },
+    { label: "9 AM – 5 PM", href: null },
     { label: "Sun – Mon", href: null },
     { label: "Closed", href: null },
   ],
