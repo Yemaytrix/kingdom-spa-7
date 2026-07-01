@@ -78,19 +78,12 @@ export default function ServiceCard({ service, index, onClick }: ServiceCardProp
           </div>
         </div>
       ) : (
-        /* Badges — only shown on non-add-on services */
-        (service.featured || service.grandOpening) && (
-          <div className="absolute top-6 right-6 flex flex-col items-end gap-2">
-            {service.featured && (
-              <span className="font-jost text-[8px] tracking-[0.35em] uppercase text-gold-600 bg-gold-100/70 border border-gold-300/50 px-2.5 py-1 rounded-full">
-                Most Loved
-              </span>
-            )}
-            {service.grandOpening && (
-              <span className="font-jost text-[8px] tracking-[0.35em] uppercase text-sapphire-600 bg-sapphire-50/80 border border-sapphire-200/60 px-2.5 py-1 rounded-full whitespace-nowrap">
-                Grand Opening Price
-              </span>
-            )}
+        /* Featured badge — only shown on non-add-on services */
+        service.featured && (
+          <div className="absolute top-6 right-6">
+            <span className="font-jost text-[8px] tracking-[0.35em] uppercase text-gold-600 bg-gold-100/70 border border-gold-300/50 px-2.5 py-1 rounded-full">
+              Most Loved
+            </span>
           </div>
         )
       )}
@@ -111,7 +104,7 @@ export default function ServiceCard({ service, index, onClick }: ServiceCardProp
       </p>
 
       {/* Price / Duration */}
-      <div className="flex items-center gap-5 mb-6">
+      <div className="flex items-center flex-wrap gap-x-5 gap-y-2 mb-6">
         <span className="font-cormorant text-2xl text-gold-600 font-light">
           {service.price}
         </span>
@@ -119,6 +112,11 @@ export default function ServiceCard({ service, index, onClick }: ServiceCardProp
         <span className="font-jost text-xs text-ink-400 font-light tracking-wide">
           {service.duration}
         </span>
+        {service.grandOpening && (
+          <span className="font-jost text-[8px] tracking-[0.35em] uppercase text-sapphire-600 bg-sapphire-50/80 border border-sapphire-200/60 px-2.5 py-1 rounded-full whitespace-nowrap">
+            Grand Opening Price
+          </span>
+        )}
       </div>
 
       {/* Description snippet */}
